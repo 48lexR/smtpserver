@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/smtp.dir/link.d CMakeFiles/smtp.dir/src/main.c.o CMakeFiles/smtp.dir/src/parse.c.o CMakeFiles/smtp.dir/src/utils.c.o -o smtp

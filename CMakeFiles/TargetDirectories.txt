@@ -1,0 +1,3 @@
+/home/cage/Documents/github/smtpserver/CMakeFiles/smtp.dir
+/home/cage/Documents/github/smtpserver/CMakeFiles/edit_cache.dir
+/home/cage/Documents/github/smtpserver/CMakeFiles/rebuild_cache.dir
