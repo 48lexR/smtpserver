@@ -5,20 +5,22 @@
 #include <stdio.h>
 #include <stddef.h>
 
-void error(size_t type){
+char * error(size_t type){
     switch(type){
+	case 220:
+		return "220 ";
+	case 221:
+		return "221 closing connection";
         case 250:
-            puts("250 OK");
-            break;
+        	return "250 OK";
         case 354:
-            puts("354 Begin data; end with <CRLF>.<CRLF>");
-            break;
+            	return "354 Begin DATA; End with <CR><LF>.<CR><LF>";
         case 500:
-            puts("500 Syntax error: command unrecognized");
-            break;
+            	return "500 Syntax error: command unrecognized";
         case 501:
-            puts("501 Syntax error in parameters or arguments");
-            break;
+            	return "501 Syntax error in parameters or arguments";
+	case 503:
+	    	return "503 Bad order of commands.";
     }
 }
 
@@ -39,21 +41,5 @@ String * rcpt(String * line){
 }
 
 String * data(String * line){
-
-}
-
-Letter * parse(String * line){
-    Letter * letter = initNewLetter();
-    String * line = handleInput();
-    // mail parsing
-    String * forwardPath = mail(line);
-    letter->forward = forwardPath;
-    destroyString(line);
-
-    // rcpt parsing
-    destroyLetter(letter);
-}
-
-void save(){
 
 }
